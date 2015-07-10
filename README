@@ -1,0 +1,16 @@
+TextOnComplete is a way to send yourself a text message when one of your script (finally) finishes.
+
+For example, say you are working in R, and you want to be able to step away from your desk and receive a notification when your script has finished.
+
+The general idea behind TextOnComplete:
+
+	1)  Get yourself a hash key from http://randomkeygen.com and enter it into the $key variable in mailer.php.  Do this so other people can't use your script!
+
+	2)  Copy mailer.php to your website (or heroku, or whever you have access to an SMTP [email] server).
+
+	3)  Find out your "email to text" address from this site:
+		http://www.wikihow.com/Text-from-a-Computer-to-a-Cell-Phone
+
+	4)  Make an HTTP request to your website from your script.  Build the URL such that you enter the appropriate parameters (to, from, subject, message, and hash).  Don't forget to send the hash key you came up with in step 1.  If you did everything correctly, then you will receive a text message from your wireless carrier.
+
+	5)  Profit?
